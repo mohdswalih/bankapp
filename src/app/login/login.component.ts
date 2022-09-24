@@ -23,9 +23,33 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  login(){
-    var accno=this.accno
-    var password=this.password
+  // login(){
+  //   var accno=this.accno
+  //   var password=this.password
+  //   let userDetails=this.userDetails
+  //   if(accno in userDetails){
+  //     if(password==userDetails[accno]['password']){
+  //       alert('login successful')
+
+  //     }
+  //     else{
+  //       alert('incorrect password')
+  //     }
+  //   }
+  //   else{
+  //     alert('user not exist or incorrect user name')
+  //   }
+    
+  //   alert('login successful')
+  // }
+
+  login(a:any,b:any){
+    console.log(a.value);
+    console.log(b.value);
+    
+    
+    var accno=a.value
+    var password=b.value
     let userDetails=this.userDetails
     if(accno in userDetails){
       if(password==userDetails[accno]['password']){
@@ -40,7 +64,7 @@ export class LoginComponent implements OnInit {
       alert('user not exist or incorrect user name')
     }
     
-    alert('login successful')
+    
   }
   acnoChange(event:any){
    this.accno=event.target.value
@@ -49,9 +73,7 @@ export class LoginComponent implements OnInit {
   }
   passchange(event:any){
     this.password=event.target.value
-    console.log(this.password);
-
-
+    console.log(this.password)
 
   }
 
