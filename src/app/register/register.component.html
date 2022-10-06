@@ -1,0 +1,17 @@
+<form (ngSubmit)="register" action="" class="for">
+    <h2>Register</h2>
+    <div>
+        <label for="username"></label>
+        <input name="username" type="text" placeholder="Username" [(ngModel)]="username" id="uname" >
+        
+    </div>
+    <br>
+    <div><label for="acc"></label>
+        <input name="accno" type="text" placeholder="Account Number"[(ngModel)]="accno" id="acc" >
+    </div><br>
+    <div>
+        <label for="pass"></label>
+        <input name="password" type="password" id="pass" placeholder="Password" [(ngModel)]="pass" >
+    </div>
+    <button type="submit" (click)="register()">register</button>
+</form>

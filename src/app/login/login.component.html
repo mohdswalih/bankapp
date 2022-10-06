@@ -1,18 +1,18 @@
 <div><h3>{{aim}}</h3></div>
-<form action="" class="login1">
+<form (ngSubmit)="login" action="" class="login1">
     <h2>Sign in</h2>
     <div class="input-icons">
         <i class="fa-solid fa-envelope-open" id="pas"></i>
-        <input class="input-field" type="text" [placeholder]="acnt" #accno id="accno">
+        <input name="accnom" class="input-field" type="text" [placeholder]="acnt" [(ngModel)]="accno"  id="accno">
         <br><br>
         <i class="fa-solid fa-lock" id="pas"></i>
-        <input class="input-field" type="password" placeholder="Password" #password id="pass" ><i class="bi bi-eye-slash"
+        <input name="password" class="input-field" type="password" placeholder="Password" [(ngModel)]="password"  id="pass" ><i class="bi bi-eye-slash"
         id="pasi"></i>
         <br><br>
-        <button type="button" (click)="login(accno,password)">Sign in</button>
+        <button type="submit" (click)="login()">Sign in</button>
         <br>
         <br>
-        <p>Don't have an account ? <a href="./register.html" id="link">CREATE</a></p>
+        <p>Don't have an account ? <a href="./register.html" routerLink="register" id="link">CREATE</a></p>
     </div>
 </form>
- -->
+ 
